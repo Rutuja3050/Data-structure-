@@ -37,4 +37,5 @@ int main()
     std::cout<<"Enter the element which you want to search : ";
     std::cin>>target;
     linearsearch(N,arr,target);
+return 0;
 }
