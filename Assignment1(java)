@@ -1,0 +1,42 @@
+/*Subject:-Data Structure and problem solving 
+Name:-Rutuja Anil Kadam
+Roll no:-58
+Batch:-SA3
+Assignment no:-1
+Topic:-Assignment based on linearsearch
+*/
+
+
+import java.util.*;
+public class Solution{
+    public static void linearSearch(int N,int arr[],int target){
+        int index=0;
+        int count=0;
+        for(int i=0;i<N;i++){
+            if(arr[i]==target){
+                index=1;
+                System.out.println(" Element is present at : "+i);
+                count++;
+            }
+        }
+        if(index==1){
+            System.out.println("The number is present "+count+" times");
+        }
+        else{
+        System.out.print("Element is not present in the array");
+    }
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of an array : ");
+        int N=sc.nextInt();
+        System.out.println("Enter the array elements : ");
+        int arr[]=new int[N];
+        for(int i=0;i<N;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Enter the element which you want to search : ");
+        int target=sc.nextInt();
+        linearSearch(N,arr,target);
+    }
+}
