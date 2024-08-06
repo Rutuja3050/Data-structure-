@@ -1,0 +1,40 @@
+/*Subject:-Data Structure and problem solving 
+Name:-Rutuja Anil Kadam
+Assignment no:-1
+Topic:-Assignment based on linearsearch
+*/
+
+#include<iostream>
+void linearsearch(int N,int arr[],int target){
+    int count=0;
+    int index=0;
+    for(int i=0;i<N;i++){
+    if(arr[i]==target){
+        index=1;
+    std::cout<<"Element is present at "<<i<<"\n";
+    count++;
+    }
+    
+  }
+  if(index==1){
+      std::cout<<"The number is present "<<count<<" times.";
+  }
+  else{
+  std::cout<<"Element is not present.";
+       }
+}
+int main()
+{
+    int N;
+    int target;
+    int arr[100];
+    std::cout<<"Enter the size of an array : ";
+    std::cin>>N;
+    std::cout<<"Enter the elements : ";
+    for(int i=0;i<N;i++){
+        std::cin>>arr[i];
+    }
+    std::cout<<"Enter the element which you want to search : ";
+    std::cin>>target;
+    linearsearch(N,arr,target);
+}
